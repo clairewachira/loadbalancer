@@ -73,6 +73,7 @@ Ensure Docker is running and no conflicting ports (5000, 8000–8002) are in use
 Additional Materials
 
 Task A-1
+
 ![image](https://github.com/user-attachments/assets/4ede1512-1ef1-4461-a1e4-fb84c4c41968)
 
 Task A-2
@@ -87,7 +88,8 @@ Task A-4
 
 ![image](https://github.com/user-attachments/assets/a1b2c537-0701-4f4f-b312-735a048d7c0e)
 
-![image](https://github.com/user-attachments/assets/f8c4147b-b49b-488e-9284-0bdc69a67cab)
+![image](https://github.com/user-attachments/assets/95c1c6a8-fafb-4249-8bac-d74bbc55a056)
+
 
 
 
