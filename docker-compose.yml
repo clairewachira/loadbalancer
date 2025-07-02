@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  loadbalancer:
+    build: ./load_balancer
+    ports:
+      - "5000:5000"
+    networks:
+      - net1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  
+    privileged: true
+
+  server1:
+    build: ./server
+    image: myservers
+    ports:
+      - "8000:8000"
+    networks:
+      - net1
+
+  server2:
+    image: myservers
+    ports:
+      - "8001:8000"
+    networks:
+      - net1
+
+  server3:
+    image: myservers
+    ports:
+      - "8002:8000"
+    networks:
+      - net1
+
+networks:
+  net1:
+    driver: bridge
