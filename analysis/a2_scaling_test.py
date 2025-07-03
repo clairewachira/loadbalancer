@@ -67,7 +67,7 @@ async def main():
             return
 
     for n in range(2, 7):
-        print(f"\n🔧 Setting up N = {n} replicas")
+        print(f"\n Setting up N = {n} replicas")
         hostnames = replica_sets.get(n, [])
         
         if hostnames:
