@@ -25,7 +25,7 @@ async def hit(i):
             return f"failed: {str(e)}"
 
 async def run_test(n):
-    print(f"\n🧪 Testing with N = {n} replicas")
+    print(f"\n Testing with N = {n} replicas")
     
     async with httpx.AsyncClient() as client:
         try:
@@ -39,7 +39,7 @@ async def run_test(n):
     responses = await asyncio.gather(*tasks)
 
     counter = Counter(responses)
-    print("\n📊 Distribution:")
+    print("\n Distribution:")
     for node, count in counter.items():
         print(f"{node}: {count} requests")
 
@@ -53,7 +53,7 @@ async def run_test(n):
         print("All requests failed!")
 
 async def main():
-    print("🔄 Resetting to initial state...")
+    print(" Resetting to initial state...")
     async with httpx.AsyncClient() as client:
         try:
             await client.request(
@@ -86,7 +86,7 @@ async def main():
         await run_test(n)
         await asyncio.sleep(1)
 
-    print("\n📊 Final Results:")
+    print("\n Final Results:")
     for n, avg in results.items():
         print(f"N = {n} replicas → avg = {avg} req/server")
 
